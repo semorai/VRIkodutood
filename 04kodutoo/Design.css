@@ -1,0 +1,76 @@
+#exterior {
+  position: fixed;
+  left: 30%;
+  top: 30%;
+  width: 200px;
+  height: 200px;
+}
+.interior {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 50%;
+  border: solid black 1px;
+}
+
+.interior:nth-child(even) { 
+  background-color: red;
+}
+.interior:nth-child(odd) {
+  background-color: white;
+}
+
+.interior:nth-child(1) {
+  height: 100%;
+  width: 100%;
+}
+
+.interior:nth-child(2) {
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+}
+
+.interior:nth-child(3) {
+  top: 20%;
+  left: 20%;
+  height: 60%;
+  width: 60%;
+}
+
+.interior:nth-child(4) {
+  top: 30%;
+  left: 30%;
+  height: 40%;
+  width: 40%;
+}
+
+.interior:nth-child(5) {
+  top: 40%;
+  left: 40%;
+  height: 20%;
+  width: 20%;
+}
+
+.interior:nth-child(6) {
+  top: 47.5%;
+  left: 47.5%;
+  height: 5%;
+  width: 5%;
+}
+
+#Duck {
+  z-index: -1; /* näitab pilti muude elementide taga */
+  width: 100%;
+  position: fixed;
+  left: 0%;
+  bottom: 0%;
+}
+
+
+#Validation {
+  position: fixed;
+  left: 20%;
+  top: 20%;
+}
