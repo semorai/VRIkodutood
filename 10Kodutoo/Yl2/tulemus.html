@@ -1,0 +1,24 @@
+<?php
+if (isset($_POST["pilt"])){
+	$pilt = $_POST["pilt"];
+	if($pilt>0 AND $pilt<count($pildid)+1){
+		$result="Hääletasid pildi \"".$pildid[$pilt-1]['alt']."\" poolt!";
+	} else {
+		$result="Pilti ei eksisteeri!";
+	} 
+} else {
+	$result="Ei hääletatud!";
+}
+
+
+if (isset($_SESSION['voted_for'])) {
+	$result = "Sa juba hääletasid pildi \"".$_SESSION['voted_for']."\" poolt!";
+} else {
+	if ($result != "Ei hääletatud!") {
+		$_SESSION['voted_for'] = $pildid[$pilt-1]{'alt'};
+	}
+}
+
+?>
+	<h3>Valiku tulemus</h3>
+	<p><?php echo($result) ?></p>
