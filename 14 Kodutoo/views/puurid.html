@@ -1,0 +1,20 @@
+<?php if (isset($errors)):?>
+		<?php foreach($errors as $error):?>
+			<div style="color:red;"><?php echo htmlspecialchars($error); ?></div>
+		<?php endforeach;?>
+	<?php endif;?>
+
+<?php
+
+foreach (array_keys($puurid) as $puur) {
+	echo "<div class=\"puur\"><h5>Puur $puur</h5>\n";
+	foreach ($puurid[$puur] as $loom) {
+		echo "\t<figure> 
+	<img src=\"{$loom['liik']}\">
+	<figurecaption>{$loom['nimi']}</figurecaption> 
+	</figure> <a href='?page=muuda&id={$loom['id']}'>Muuda</a>\n";
+	}
+	echo "</div>\n";
+}
+
+?>
